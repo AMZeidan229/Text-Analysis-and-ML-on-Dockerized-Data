@@ -1,0 +1,28 @@
+Supervised model: TF-IDF + Logistic Regression
+Target: Recommended IND (1 = recommended, 0 = not recommended)
+Train size: 18101 | Test size: 4526
+Baseline accuracy (majority class): 0.8188
+
+Accuracy: 0.8911
+Precision (Recommended): 0.9052
+Recall (Recommended): 0.9684
+F1 (Recommended): 0.9357
+
+                 precision    recall  f1-score   support
+
+Not recommended       0.79      0.54      0.64       820
+    Recommended       0.91      0.97      0.94      3706
+
+       accuracy                           0.89      4526
+      macro avg       0.85      0.75      0.79      4526
+   weighted avg       0.88      0.89      0.88      4526
+
+Confusion matrix [[TN, FP], [FN, TP]]:
+[[ 444  376]
+ [ 117 3589]]
+
+
+Model comparison (bonus)
+                  Model  Accuracy  Precision (Rec.)  Recall (Rec.)  F1 (Rec.)  Recall (Not rec.)  F1 (Not rec.)
+    Logistic Regression    0.8911            0.9052         0.9684     0.9357             0.5415         0.6430
+Multinomial Naive Bayes    0.8343            0.8320         0.9995     0.9081             0.0878         0.1611

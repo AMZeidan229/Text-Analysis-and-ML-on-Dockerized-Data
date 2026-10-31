@@ -1,0 +1,31 @@
+K-Means clustering of review text (TF-IDF + TruncatedSVD, 100 components)
+k = 9
+Silhouette score (5,000-review sample): 0.0388
+Adjusted Rand Index vs Recommended IND: 0.0094 | NMI: 0.0314
+
+Cluster sizes:
+  Cluster 0: 4679 reviews | top terms: love, great, comfortable, color, soft, wear, perfect, bought, fit, flattering
+  Cluster 1: 3681 reviews | top terms: dress, love, size, fit, beautiful, wear, flattering, like, just, fabric
+  Cluster 2: 1088 reviews | top terms: pants, love, fit, great, size, pair, comfortable, wear, like, perfect
+  Cluster 3: 1320 reviews | top terms: jeans, great, skinny, love, fit, wear, pair, perfect, size, look
+  Cluster 4: 4459 reviews | top terms: like, just, fabric, did, really, look, fit, nice, looks, color
+  Cluster 5: 1455 reviews | top terms: shirt, love, great, cute, like, wear, soft, fit, little, material
+  Cluster 6: 1026 reviews | top terms: skirt, size, waist, love, great, wear, fabric, fit, like, beautiful
+  Cluster 7: 3524 reviews | top terms: size, small, medium, large, ordered, fit, wear, runs, usually, xs
+  Cluster 8: 1395 reviews | top terms: sweater, love, soft, color, great, like, wear, just, sleeves, warm
+
+Recommended share per cluster (%):
+recommended_label  Not recommended  Recommended
+cluster                                        
+0                              5.4         94.6
+1                             19.0         81.0
+2                             12.4         87.6
+3                              5.8         94.2
+4                             36.6         63.4
+5                             23.6         76.4
+6                             15.0         85.0
+7                             15.4         84.6
+8                             19.2         80.8
+
+Interpretation:
+K-Means (k=9) mostly grouped the reviews by garment type and topic: dresses, pants, jeans, skirts, shirts, sweaters, a cluster about sizing advice, a cluster of enthusiastic praise (love, comfortable, soft), and a cluster about doubts with fabric and fit. The clusters do not match the Recommended / Not recommended labels (ARI 0.0094, NMI 0.0314), because K-Means only used text similarity and never saw the labels. Cluster 4 (fabric and fit doubts) has the most complaints: 36.6% not recommended and an average rating of 3.58, compared with 18.1% not recommended overall. The silhouette score is low (0.0388), so the clusters overlap and should be read as loose themes.
