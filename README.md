@@ -1,7 +1,5 @@
-# CSCI461 Assignment 1: Dockerized Data, Text Analysis and Machine Learning on Clothing Reviews
+# Dockerized Data, Text Analysis and Machine Learning on Clothing Reviews
 
-- **Course:** CSCI461 Introduction to Big Data, Nile University, Fall 2026
-- **Student:** Ahmed Mohamed Zeidan - 231001097
 - **Docker Hub image:** `amzeidan/bd-a1:v1`
 - **GitHub repository:** https://github.com/AMZeidan229/Text-Analysis-and-ML-on-Dockerized-Data
 
